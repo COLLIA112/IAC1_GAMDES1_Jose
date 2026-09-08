@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bjn1wte1yoclc"]
+
+[ext_resource type="Script" uid="uid://rl6uqbxd00w6" path="res://main.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c5a7id0ju3txh" path="res://player.gd" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://ccbryoe7j4p6w" path="res://chpper.png" id="3_cm0pq"]
+
+[sub_resource type="Theme" id="Theme_v8a1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8a1n"]
+size = Vector2(1921, 87)
+
+[node name="Main" type="Node2D" unique_id=910432869]
+script = ExtResource("1_glv2v")
+
+[node name="1" type="Label" parent="." unique_id=355741132]
+visible = false
+offset_left = 109.0
+offset_top = 62.0
+offset_right = 603.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.26666668, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "So please "
+
+[node name="2" type="Label" parent="." unique_id=1737074512]
+visible = false
+offset_left = 145.0
+offset_top = 109.0
+offset_right = 639.0
+offset_bottom = 132.0
+theme = SubResource("Theme_v8a1n")
+theme_override_colors/font_color = Color(1, 0.6039216, 1, 1)
+theme_override_font_sizes/font_size = 23
+text = "HURRY"
+
+[node name="3" type="Label" parent="." unique_id=589027423]
+visible = false
+offset_left = 237.0
+offset_top = 90.0
+offset_right = 731.0
+offset_bottom = 113.0
+text = "leave me!"
+
+[node name="4" type="Label" parent="." unique_id=244289569]
+visible = false
+offset_left = 202.0
+offset_top = 154.0
+offset_right = 696.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0.9115129, 0.23877922, 0.23013803, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0.9411765, 0.41960785)
+theme_override_font_sizes/font_size = 29
+text = " I CANT BREATHE!"
+
+[node name="5" type="Label" parent="." unique_id=1832857263]
+visible = false
+offset_left = 166.0
+offset_top = 198.0
+offset_right = 223.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0.7764706, 0.6862745, 0.34117648, 1)
+text = "pls"
+
+[node name="6" type="Label" parent="." unique_id=365668310]
+visible = false
+offset_left = 273.0
+offset_top = 117.0
+offset_right = 767.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.3019608, 0.48235294, 0.5882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "dont say you"
+
+[node name="7" type="Label" parent="." unique_id=1104422060]
+visible = false
+offset_left = 292.0
+offset_top = 200.0
+offset_right = 520.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0.70980394, 0.07058824, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.7411765, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "<3 me"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=379030272]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=695128229]
+script = ExtResource("2_r0du0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2053371018]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2070776266]
+position = Vector2(35, -236.00002)
+scale = Vector2(0.1936027, 0.19000001)
+texture = ExtResource("3_cm0pq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=828144365]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=832300501]
+position = Vector2(-27, 36.5)
+shape = SubResource("RectangleShape2D_v8a1n")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1919302842]
+offset_left = -984.0
+offset_top = -4.0
+offset_right = 941.0
+offset_bottom = 36.0
+color = Color(0.69803923, 0.6431373, 1, 1)

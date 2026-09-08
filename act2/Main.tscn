@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://bjn1wte1yoclc"]
+
+[ext_resource type="Script" uid="uid://rl6uqbxd00w6" path="res://main.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c5a7id0ju3txh" path="res://player.gd" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://ccbryoe7j4p6w" path="res://chpper.png" id="3_cm0pq"]
+
+[sub_resource type="Theme" id="Theme_v8a1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0du0"]
+size = Vector2(81, 119.50001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8a1n"]
+size = Vector2(1921, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkjpf"]
+size = Vector2(76, 160.75)
+
+[node name="Main" type="Node2D" unique_id=910432869]
+script = ExtResource("1_glv2v")
+
+[node name="1" type="Label" parent="." unique_id=355741132]
+visible = false
+offset_left = 109.0
+offset_top = 62.0
+offset_right = 603.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.26666668, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "So please "
+
+[node name="2" type="Label" parent="." unique_id=1737074512]
+visible = false
+offset_left = 145.0
+offset_top = 109.0
+offset_right = 639.0
+offset_bottom = 132.0
+theme = SubResource("Theme_v8a1n")
+theme_override_colors/font_color = Color(1, 0.6039216, 1, 1)
+theme_override_font_sizes/font_size = 23
+text = "HURRY"
+
+[node name="3" type="Label" parent="." unique_id=589027423]
+visible = false
+offset_left = 237.0
+offset_top = 90.0
+offset_right = 731.0
+offset_bottom = 113.0
+text = "leave me!"
+
+[node name="4" type="Label" parent="." unique_id=244289569]
+visible = false
+offset_left = 202.0
+offset_top = 154.0
+offset_right = 696.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0.9115129, 0.23877922, 0.23013803, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0.9411765, 0.41960785)
+theme_override_font_sizes/font_size = 29
+text = " I CANT BREATHE!"
+
+[node name="5" type="Label" parent="." unique_id=1832857263]
+visible = false
+offset_left = 166.0
+offset_top = 198.0
+offset_right = 223.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0.7764706, 0.6862745, 0.34117648, 1)
+text = "pls"
+
+[node name="6" type="Label" parent="." unique_id=365668310]
+visible = false
+offset_left = 273.0
+offset_top = 117.0
+offset_right = 767.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.3019608, 0.48235294, 0.5882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "dont say you"
+
+[node name="7" type="Label" parent="." unique_id=1104422060]
+visible = false
+offset_left = 292.0
+offset_top = 200.0
+offset_right = 520.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0.70980394, 0.07058824, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.7411765, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "<3 me"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=379030272]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=695128229]
+script = ExtResource("2_r0du0")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2070776266]
+position = Vector2(235.625, 100)
+scale = Vector2(0.17199774, 0.14400001)
+texture = ExtResource("3_cm0pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2053371018]
+position = Vector2(244.5, 106.25)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("RectangleShape2D_r0du0")
+
+[node name="floor" type="StaticBody2D" parent="." unique_id=828144365]
+
+[node name="ColorRect" type="ColorRect" parent="floor" unique_id=1919302842]
+offset_left = -671.0
+offset_top = 532.0
+offset_right = 1254.0
+offset_bottom = 598.0
+color = Color(0.69803923, 0.6431373, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="floor" unique_id=1868123078]
+offset_left = -671.0
+offset_top = 532.0
+offset_right = 1254.0
+offset_bottom = 598.0
+color = Color(0.69803923, 0.6431373, 1, 1)
+
+[node name="floor" type="CollisionShape2D" parent="floor" unique_id=832300501]
+position = Vector2(286, 576)
+shape = SubResource("RectangleShape2D_v8a1n")
+
+[node name="bk1" type="ColorRect" parent="floor" unique_id=903507562]
+offset_left = 413.0
+offset_top = 357.0
+offset_right = 494.0
+offset_bottom = 531.0
+color = Color(0.923262, 0.55828804, 0.8236389, 1)
+
+[node name="bk2" type="ColorRect" parent="floor" unique_id=1619439050]
+offset_left = 411.0
+offset_top = 3.0
+offset_right = 492.0
+offset_bottom = 166.0
+color = Color(0.923262, 0.55828804, 0.8236389, 1)
+
+[node name="bk3" type="ColorRect" parent="floor" unique_id=1703804436]
+offset_left = 619.0
+offset_top = -36.0
+offset_right = 700.0
+offset_bottom = 127.0
+color = Color(0.923262, 0.55828804, 0.8236389, 1)
+
+[node name="bk4" type="ColorRect" parent="floor" unique_id=289555157]
+offset_left = 621.0
+offset_top = 318.0
+offset_right = 702.0
+offset_bottom = 529.0
+color = Color(0.923262, 0.55828804, 0.8236389, 1)
+
+[node name="bk5" type="ColorRect" parent="floor" unique_id=1735118196]
+offset_left = 823.0
+offset_top = 385.0
+offset_right = 904.0
+offset_bottom = 533.0
+color = Color(0.923262, 0.55828804, 0.8236389, 1)
+
+[node name="bk6" type="ColorRect" parent="floor" unique_id=1796818050]
+offset_left = 814.0
+offset_top = 2.0
+offset_right = 895.0
+offset_bottom = 200.0
+color = Color(0.923262, 0.55828804, 0.8236389, 1)
+
+[node name="block 1" type="CollisionShape2D" parent="floor" unique_id=961304672]
+position = Vector2(454, 81)
+shape = SubResource("RectangleShape2D_jkjpf")
+
+[node name="block 2" type="CollisionShape2D" parent="floor" unique_id=1632656746]
+position = Vector2(452, 444)
+shape = SubResource("RectangleShape2D_jkjpf")
+
+[node name="block 3" type="CollisionShape2D" parent="floor" unique_id=622691667]
+position = Vector2(659, 400)
+shape = SubResource("RectangleShape2D_jkjpf")
+
+[node name="block 4" type="CollisionShape2D" parent="floor" unique_id=3047683]
+position = Vector2(660, 45)
+shape = SubResource("RectangleShape2D_jkjpf")
+
+[node name="block 5" type="CollisionShape2D" parent="floor" unique_id=1062225947]
+position = Vector2(856, 121)
+shape = SubResource("RectangleShape2D_jkjpf")
+
+[node name="block 6" type="CollisionShape2D" parent="floor" unique_id=1431148889]
+position = Vector2(865, 473)
+shape = SubResource("RectangleShape2D_jkjpf")
