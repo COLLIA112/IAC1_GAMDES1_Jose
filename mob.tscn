@@ -19,7 +19,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"fly",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -30,7 +30,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"swim",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -41,7 +41,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8a1n"]
@@ -59,10 +59,10 @@ metadata/_edit_group_ = true
 position = Vector2(-3.75, 0)
 scale = Vector2(0.75, 0.812)
 sprite_frames = SubResource("SpriteFrames_jkjpf")
-animation = &"walk"
-frame_progress = 0.8736079
+animation = &"fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1063903169]
+rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_v8a1n")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=316698837]
