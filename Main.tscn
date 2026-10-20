@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://sewh0qpnqpn6" path="res://mob.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cktxxcx8xvrrg" path="res://player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dd68qlb44iwui" path="res://hud.tscn" id="4_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://bduujt1fmrehc" path="res://dodge_the_creeps_2d_assets/art/gameover.wav" id="5_7mycd"]
+[ext_resource type="AudioStream" uid="uid://cpdqpdpru5651" path="res://dodge_the_creeps_2d_assets/art/House In a Forest Loop.ogg" id="6_272bh"]
 
 [sub_resource type="Curve2D" id="Curve2D_1bvp3"]
 _data = {
@@ -14,6 +16,14 @@ point_count = 8
 [node name="Main" type="Node" unique_id=1033718142]
 script = ExtResource("1_0xm2m")
 mob_scene = ExtResource("2_1bvp3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1488483699]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.165054, 0.29926687, 0.37692943, 1)
 
 [node name="Player" parent="." unique_id=2035040360 instance=ExtResource("2_h2yge")]
 
@@ -37,6 +47,12 @@ position = Vector2(8, -8)
 rotation = 0.016947528
 
 [node name="HUD" parent="." unique_id=544502516 instance=ExtResource("4_1bvp3")]
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=129534028]
+stream = ExtResource("5_7mycd")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1523896556]
+stream = ExtResource("6_272bh")
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

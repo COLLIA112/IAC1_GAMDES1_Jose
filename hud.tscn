@@ -3,6 +3,13 @@
 [ext_resource type="Script" uid="uid://c8bf5inkt7bce" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="FontFile" uid="uid://53chipb6cfw4" path="res://dodge_the_creeps_2d_assets/fonts/Xolonium-Regular.ttf" id="2_8sq4i"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_64ctp"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_kek77"]
+events = [SubResource("InputEventKey_64ctp")]
+
 [node name="HUD" type="CanvasLayer" unique_id=544502516]
 script = ExtResource("1_64ctp")
 
@@ -43,6 +50,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_8sq4i")
 theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_kek77")
 text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="." unique_id=950369105]
