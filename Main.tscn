@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b06t3ca81ly5c"]
+
+[ext_resource type="Texture2D" uid="uid://bu5ngvcvfciq2" path="res://pngwing.com.png" id="1_glv2v"]
+
+[sub_resource type="GDScript" id="GDScript_y32ns"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Main" type="Node2D" unique_id=1417699025]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1174061873]
+position = Vector2(87.99997, 89)
+scale = Vector2(0.2345679, 0.227)
+texture = ExtResource("1_glv2v")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1898368609]
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=533522315]
+offset_left = 154.0
+offset_top = 104.0
+offset_right = 223.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.84313726, 0.5019608, 0.63529414, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7294118)
+theme_override_font_sizes/font_size = 29
+text = "WAO"
+script = SubResource("GDScript_y32ns")
